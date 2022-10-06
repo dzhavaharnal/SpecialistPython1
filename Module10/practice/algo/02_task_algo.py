@@ -7,3 +7,17 @@
 
 # Дополнительно: сделайте так, чтобы можно было гарантированно угадать число за 7 попыток.
 
+N = 50
+upper = 100
+low = 0
+answer = 2
+while answer != 1:
+    answer = int(input(f"Твое число равно, меньше или больше чем число {N}: "))
+    if answer == 2:
+        low = N
+        N = int((low + upper) / 2)
+    elif answer == 3:
+        upper = N
+        N = int((low + upper) / 2)
+    else:
+        print(N)
